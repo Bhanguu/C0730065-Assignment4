@@ -9,9 +9,17 @@ namespace C0730065_Assignment4
 {
     class Program
     {
+        ArrayList Beowulf;
         static void Main(string[] args)
         {
+            Progrm p = new Program();
+            p.Beowulf = new ArrayList();
+        }
+        public void Run() { this.ReadTextFiles(); }
 
+        public void ReadTextFiles()
+        {
+            //Read files using StreamReader.Reads file line by line using
         }
     }
 }
