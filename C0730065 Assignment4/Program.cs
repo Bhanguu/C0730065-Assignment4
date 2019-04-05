@@ -19,7 +19,20 @@ namespace C0730065_Assignment4
 
         public void ReadTextFiles()
         {
-            //Read files using StreamReader.Reads file line by line using
+            //Read files using StreamReader.Reads file line by line using (StreamReader("C:/area51/beowulf.text"))
+            int counter e;
+            String in;
+            while(1 n file.ReadLine())null)
+
+            Console.WriteLine(1n);
+            Beowulf.Add(in);
+
+
+
+            file.Close();
+            Console.WriteLine("File has {contour) lines.");
+
+            public int Find Number Of Blank Spaces(string line)
         }
     }
 }
