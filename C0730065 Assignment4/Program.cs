@@ -12,46 +12,56 @@ namespace C0730065_Assignment4
     class Program
     {
         ArrayList Beowulf;
-        private object file;
-        private int countletters;
+
 
         static void Main(string[] args)
         {
             Program p = new Program();
             p.Beowulf = new ArrayList();
-        }
-        public void Run() { this.ReadTextFiles(); }
+            p.ReadTextFiles();
 
+        }
+        public void Run()
+        { this.ReadTextFiles(); }
         public void ReadTextFiles()
         {
-            //Read files using StreamReader.Reads file line by line using (StreamReader("U:\Users\730065\Assignment4"))
-            int counter = 0;
-            String ln;
-            while ((ln = file.ReadLine()) != null)
+
+            //Read files using StreamReader.Reads file line by line
+            using (StreamReader file = new StreamReader("U:/Users/730065/Assignment4/Beowulf.txt"))
+
             {
-                Console.WriteLine(ln);
-                Beowulf.Add(ln);
-
+                int counter = 0;
+                string ln;
+                while ((ln = file.ReadLine()) != null)
+                {
+                    Console.WriteLine(ln);
+                    Beowulf.Add(ln);
+                    counter++;
+                }
+                file.Close();
+                Console.WriteLine($"File has {counter} lines.");
             }
-        
-
-            file.Close();
-            Console.WriteLine("File has {contour) lines.");
         }
-    
+
         public int FindNumberOfBlankSpaces(string line)
         {
-            //https://stackoverflow.com/questions/17812566/count-words-and-spaces-in-string-c-
-            int counterletters = 0;
-
+            //https://stackoverflow.com/questions/17812566/count-words-and-spaces-in-string-c-sharp
+            int countletters = 0;
             int countSpaces = 0;
 
             foreach (char c in line)
-
-                if (char.IsLetter(c)) { countletters++; }
-            if (char.IsWhiteSpace(c))
-            { countSpaces++; }
+            {
+                if
+                    (char.IsLetter(c))
+                {
+                    countletters++;
+                }
+                if
+                        (char.IsWhiteSpace(c))
+                { countSpaces++; }
+            }
             return countSpaces;
+
         }
     }
 }
