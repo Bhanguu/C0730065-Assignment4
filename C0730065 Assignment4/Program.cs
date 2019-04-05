@@ -3,6 +3,8 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using System.Collections;
+using System.IO;
 
 namespace C0730065_Assignment4
     //C0730065 Assignment4.
@@ -10,9 +12,10 @@ namespace C0730065_Assignment4
     class Program
     {
         ArrayList Beowulf;
+
         static void Main(string[] args)
         {
-            Progrm p = new Program();
+            Program p = new Program();
             p.Beowulf = new ArrayList();
         }
         public void Run() { this.ReadTextFiles(); }
@@ -20,19 +23,31 @@ namespace C0730065_Assignment4
         public void ReadTextFiles()
         {
             //Read files using StreamReader.Reads file line by line using (StreamReader("C:/area51/beowulf.text"))
-            int counter e;
+            int counter = 0;
             String in;
-            while(1 n file.ReadLine())null)
+            while ((in = file.ReadLine()) != null)
+            {
+                Console.WriteLine(1n);
+                Beowulf.Add(In);
 
-            Console.WriteLine(1n);
-            Beowulf.Add(in);
-
-
+            }
 
             file.Close();
             Console.WriteLine("File has {contour) lines.");
-
-            public int Find Number Of Blank Spaces(string line)
         }
+            public int FindNumberOfBlankSpaces(string line)
+        {
+            //https://stackoverflow.com/questions/17812566/count-words-and-spaces-in-string-c-
+            int counterletters = 0;
+
+            int countSpaces = 0;
+
+           foreach (char c in line)
+
+              if (char.Isletter(c)) { count letters c++;)
+          if (char.IswhiteSpace(c))
+         {count Spaces C++; }
+            return count Spaces;
+      }
     }
-}
+
