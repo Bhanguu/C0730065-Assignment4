@@ -7,11 +7,13 @@ using System.Collections;
 using System.IO;
 
 namespace C0730065_Assignment4
-    //C0730065 Assignment4.
+//C0730065 Assignment4.
 {
     class Program
     {
         ArrayList Beowulf;
+        private object file;
+        private int countletters;
 
         static void Main(string[] args)
         {
@@ -22,32 +24,34 @@ namespace C0730065_Assignment4
 
         public void ReadTextFiles()
         {
-            //Read files using StreamReader.Reads file line by line using (StreamReader("C:/area51/beowulf.text"))
+            //Read files using StreamReader.Reads file line by line using (StreamReader("U:\Users\730065\Assignment4"))
             int counter = 0;
-            String in;
-            while ((in = file.ReadLine()) != null)
+            String ln;
+            while ((ln = file.ReadLine()) != null)
             {
-                Console.WriteLine(1n);
-                Beowulf.Add(In);
+                Console.WriteLine(ln);
+                Beowulf.Add(ln);
 
             }
+        
 
             file.Close();
             Console.WriteLine("File has {contour) lines.");
         }
-            public int FindNumberOfBlankSpaces(string line)
+    
+        public int FindNumberOfBlankSpaces(string line)
         {
             //https://stackoverflow.com/questions/17812566/count-words-and-spaces-in-string-c-
             int counterletters = 0;
 
             int countSpaces = 0;
 
-           foreach (char c in line)
+            foreach (char c in line)
 
-              if (char.Isletter(c)) { count letters c++;)
-          if (char.IswhiteSpace(c))
-         {count Spaces C++; }
-            return count Spaces;
-      }
+                if (char.IsLetter(c)) { countletters++; }
+            if (char.IsWhiteSpace(c))
+            { countSpaces++; }
+            return countSpaces;
+        }
     }
-
+}
