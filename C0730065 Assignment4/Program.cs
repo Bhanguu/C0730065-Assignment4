@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
+using System.Text.RegularExpressions;
 using System.Threading.Tasks;
 using System.Collections;
 using System.IO;
@@ -20,7 +21,7 @@ namespace C0730065_Assignment4
 
             p.Beowulf = new ArrayList();
 
-            p.Wordfinder();
+            p.Wordskipper();
 
             Console.ReadLine();
 
@@ -201,11 +202,35 @@ namespace C0730065_Assignment4
             Console.WriteLine(f);
 
         }
-
+        public void Wordskipper()
+        {
+            int f = 0;
+            int m = 0;
+            int n = 0;
+            foreach (var line in File.ReadAllLines("U:/ Users / 730065 / Assignment4/Beowulf.txt"))
+            {
+                if (line.Contains("fare"))
+                {
+                    f++;
+                }
+            }
+            foreach (string line in File.ReadAllLines("U:/ Users / 730065 / Assignment4/Beowulf.txt"))
+            {
+                if (line.Contains("war") && line.Contains("fare"))
+                {
+                    m++;
+                }
+            }
+            n = f - m;
+            Console.WriteLine(n);
+        }
     }
-
-
-
 }
+
+    
+
+
+
+
 
 
